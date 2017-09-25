@@ -1,4 +1,4 @@
-## Tigger
+## Trigger
 > ADSR controls
 
 ### Setup
