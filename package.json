@@ -30,11 +30,11 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@thewhodidthis/binocular": "github:thewhodidthis/binocular",
     "@thewhodidthis/eslint-config": "latest",
     "@thewhodidthis/sound": "github:thewhodidthis/sound",
     "browserify": "latest",
     "buble": "latest",
-    "delta-force": "github:thewhodidthis/delta-force",
     "eslint": "latest",
     "kpow": "latest",
     "rollup": "latest",
