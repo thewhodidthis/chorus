@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "General purpose envelope generator",
   "main": "index.js",
-  "module": "index.mjs",
+  "module": "index.es",
   "homepage": "https://github.com/thewhodidthis/trigger#readme",
   "repository": {
     "type": "git",
@@ -14,25 +14,26 @@
   },
   "scripts": {
     "pretest": "eslint test.js",
-    "test": "browserify test | kpow",
-    "prestart": "eslint index.mjs",
-    "start": "rollup -f cjs index.mjs | buble > index.js",
-    "prenexample": "eslint example/index.es",
+    "test": "browserify test | buble | kpow",
+    "prestart": "eslint index.es",
+    "start": "rollup -f cjs index.es > index.js",
+    "preexample": "eslint example/index.es",
     "example": "cd example; rollup -c node:x -f iife index.es | buble > index.js",
-    "postnexample": "open example/index.html"
+    "postexample": "open example/index.html"
   },
   "eslintConfig": {
     "extends": "@thewhodidthis"
   },
   "engines": {
-    "node": ">=4.2.4",
-    "npm": ">=3.5.3"
+    "node": ">=6.4.0",
+    "npm": ">=3.10.3"
   },
   "dependencies": {},
   "devDependencies": {
     "@thewhodidthis/binocular": "github:thewhodidthis/binocular",
     "@thewhodidthis/eslint-config": "latest",
     "@thewhodidthis/sound": "github:thewhodidthis/sound",
+    "@thewhodidthis/vector": "github:thewhodidthis/vector",
     "browserify": "latest",
     "buble": "latest",
     "eslint": "latest",
