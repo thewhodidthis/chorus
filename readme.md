@@ -3,6 +3,6 @@
 
 ### Setup
 ```sh
-# Fetch latest directly from github
+# Fetch latest from github
 npm install thewhodidthis/trigger
 ```
