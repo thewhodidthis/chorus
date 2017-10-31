@@ -35,12 +35,16 @@
     "@thewhodidthis/sound": "github:thewhodidthis/sound",
     "@thewhodidthis/vector": "github:thewhodidthis/vector",
     "buble": "latest",
-    "eslint": "latest",
     "cutaway": "latest",
+    "eslint": "latest",
+    "kpow": "latest",
     "rollup": "latest",
     "rollup-config-x": "latest",
     "tapeless": "latest"
   },
+  "keywords": [
+    "audio"
+  ],
   "author": "sChzs BkgNns <sotirios.bakagiannis@gmail.com> (https://www.thewhodidthis.com)",
   "license": "Unlicense"
 }
