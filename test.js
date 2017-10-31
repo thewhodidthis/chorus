@@ -1,30 +1,23 @@
-'use strict'
+import 'cutaway'
+import { assert, report } from 'tapeless'
+import trigger from './index.es'
 
 window.AudioContext = window.AudioContext || window.webkitAudioContext
 
-const kpow = require('kpow')
-const test = require('tape')
-const trigger = require('./')
+const { ok, equal } = assert
 
-kpow()
+const t1 = trigger(undefined, {})
 
-test('will default', (t) => {
-  const toggle = trigger(undefined, {})
+equal(typeof t1, 'function', 'got lambda on init', 'will default')
 
-  t.equals(typeof toggle, 'function', 'got lambda on init')
-  t.end()
-})
+const t2 = trigger()
 
-test('will toggle', (t) => {
-  const toggle = trigger()
+let isOn = false
 
-  let isOn = false
+isOn = t2()
+ok(isOn, 'is on', 'will toggle')
 
-  isOn = toggle()
-  t.ok(isOn, 'is on')
+isOn = t2()
+ok(!isOn, 'is off')
 
-  isOn = toggle()
-  t.notOk(isOn, 'is off')
-
-  t.end()
-})
+report()
