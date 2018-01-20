@@ -16,7 +16,7 @@
     "pretest": "eslint test.js",
     "test": "rollup -c node:x -f iife test.js | kpow",
     "prestart": "eslint index.es",
-    "start": "rollup -f cjs index.es > index.js",
+    "start": "rollup -f cjs index.es | buble > index.js",
     "preexample": "eslint example/index.es",
     "example": "cd example; rollup -c node:x -f iife index.es | buble > index.js"
   },
@@ -29,10 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@thewhodidthis/binocular": "github:thewhodidthis/binocular",
     "@thewhodidthis/eslint-config": "latest",
-    "@thewhodidthis/sound": "github:thewhodidthis/sound",
-    "@thewhodidthis/vector": "github:thewhodidthis/vector",
     "buble": "latest",
     "cutaway": "latest",
     "eslint": "latest",
