@@ -8,12 +8,18 @@ const { ok, notOk, equal } = assert
 
 const t1 = trigger(undefined, {})
 
-equal(typeof t1, 'function', 'got lambda on init', 'will default')
+equal
+  .describe('got lambda on init', 'will default')
+  .test(typeof t1, 'function')
 
 const t2 = trigger()
 
-ok(t2, null, 'will toggle')
-ok(t2(), 'is on')
-notOk(t2(), 'is off')
+ok
+  .test(t2)
+  .test(t2(), 'is on')
+
+notOk
+  .describe(null, 'will toggle')
+  .test(t2(), 'is off')
 
 report()
