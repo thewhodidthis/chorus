@@ -4,9 +4,9 @@ General purpose envelope generator to map out paramater changes on a given [Audi
 
 ## setup
 
-Fetch the latest version from GitHub directly:
+Download from GitHub directly:
 
 ```sh
-# Includes ES and CJS modules
+# Add to package.json
 npm install thewhodidthis/trigger
 ```
